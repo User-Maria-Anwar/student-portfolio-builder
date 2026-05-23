@@ -1,0 +1,14 @@
+{
+  "users": [],
+  "skills": [
+    { "id": 1, "name": "HTML" },
+    { "id": 2, "name": "CSS" },
+    { "id": 3, "name": "JavaScript" }
+  ],
+  "selectedSkills": [],
+  "portfolios": [],
+  "templates": [
+    { "id": 1, "name": "Modern" },
+    { "id": 2, "name": "Minimal" }
+  ]
+}
