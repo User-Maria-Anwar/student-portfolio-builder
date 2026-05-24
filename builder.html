@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Portfolio Builder</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body{
+            background: linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+            min-height:100vh;
+            font-family:Arial,sans-serif;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:30px;
+        }
+
+        .builder-card{
+            width:100%;
+            max-width:850px;
+            background:rgba(255,255,255,0.1);
+            backdrop-filter:blur(15px);
+            border-radius:25px;
+            padding:40px;
+            color:white;
+            box-shadow:0 10px 35px rgba(0,0,0,0.3);
+        }
+
+        .step{
+            display:none;
+        }
+
+        .step.active{
+            display:block;
+        }
+
+        .form-control{
+            background:rgba(255,255,255,0.12);
+            border:none;
+            color:white;
+            border-radius:12px;
+            padding:14px;
+        }
+
+        .form-control:focus{
+            background:rgba(255,255,255,0.2);
+            box-shadow:none;
+            color:white;
+        }
+
+        .form-control::placeholder{
+            color:#d1d5db;
+        }
+
+        .btn-custom{
+            background:#2563eb;
+            border:none;
+            color:white;
+            padding:12px 25px;
+            border-radius:12px;
+            transition:0.3s;
+            font-weight:600;
+        }
+
+        .btn-custom:hover{
+            background:#1d4ed8;
+        }
+
+        .skill-card{
+            background:rgba(255,255,255,0.12);
+            padding:12px 18px;
+            border-radius:12px;
+            margin-bottom:12px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .add-btn{
+            background:#2563eb;
+            border:none;
+            color:white;
+            width:35px;
+            height:35px;
+            border-radius:50%;
+            font-size:20px;
+        }
+
+        .selected-skill{
+            background:#1d4ed8;
+            display:inline-block;
+            padding:8px 15px;
+            border-radius:30px;
+            margin:5px;
+        }
+
+        textarea{
+            resize:none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="builder-card">
+
+    <h2 class="text-center mb-5">
+        Build Your Portfolio
+    </h2>
+
+    <form id="portfolioForm">
+
+        <!-- STEP 1 -->
+
+        <div class="step active">
+
+            <h4 class="mb-4">Personal Information</h4>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <input type="text" id="name" class="form-control" placeholder="Full Name">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <input type="text" id="fatherName" class="form-control" placeholder="Father Name">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <input type="email" id="email" class="form-control" placeholder="Email">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <input type="text" id="contact" class="form-control" placeholder="Contact Number">
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <input type="text" id="address" class="form-control" placeholder="Address">
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <input type="text" id="title" class="form-control" placeholder="Professional Title">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- STEP 2 -->
+
+        <div class="step">
+
+            <h4 class="mb-4">Skills</h4>
+
+            <div id="skillsList"></div>
+
+            <div class="mt-4">
+
+                <input type="text"
+                       id="customSkill"
+                       class="form-control"
+                       placeholder="Add your own skill">
+
+                <button type="button"
+                        class="btn-custom mt-3"
+                        id="addCustomSkill">
+                    Add Skill
+                </button>
+
+            </div>
+
+            <div class="mt-4">
+
+                <h5>Selected Skills</h5>
+
+                <div id="selectedSkills"></div>
+
+            </div>
+
+        </div>
+
+        <!-- STEP 3 -->
+
+<!-- STEP 3 -->
+
+<div class="step">
+
+    <h4 class="mb-4">Education</h4>
+
+    <!-- Matric -->
+
+    <div class="mb-4">
+
+        <h5>Matric</h5>
+
+        <input type="text"
+               id="matricSchool"
+               class="form-control mb-3"
+               placeholder="School Name">
+
+        <input type="text"
+               id="matricBoard"
+               class="form-control mb-3"
+               placeholder="Board">
+
+        <input type="text"
+               id="matricGrade"
+               class="form-control mb-3"
+               placeholder="Grade / Marks">
+
+        <input type="text"
+               id="matricYear"
+               class="form-control"
+               placeholder="Passing Year">
+
+    </div>
+
+    <!-- Intermediate -->
+
+    <div class="mb-4">
+
+        <h5>Intermediate</h5>
+
+        <input type="text"
+               id="interCollege"
+               class="form-control mb-3"
+               placeholder="College Name">
+
+        <input type="text"
+               id="interType"
+               class="form-control mb-3"
+               placeholder="FSC / ICS / ICOM">
+
+        <input type="text"
+               id="interGrade"
+               class="form-control mb-3"
+               placeholder="Grade">
+
+        <input type="text"
+               id="interYear"
+               class="form-control"
+               placeholder="Passing Year">
+
+    </div>
+
+    <!-- University -->
+
+    <div>
+
+        <h5>University</h5>
+
+        <input type="text"
+               id="uniName"
+               class="form-control mb-3"
+               placeholder="University Name">
+
+        <input type="text"
+               id="uniDegree"
+               class="form-control mb-3"
+               placeholder="BS Degree">
+
+        <input type="text"
+               id="uniCgpa"
+               class="form-control mb-3"
+               placeholder="CGPA">
+
+        <input type="text"
+               id="uniYear"
+               class="form-control"
+               placeholder="Passing Year">
+
+    </div>
+
+</div>
+        <!-- STEP 4 -->
+
+<!-- STEP 4 -->
+
+<div class="step">
+
+    <h4 class="mb-4">Projects</h4>
+
+    <div id="projectsContainer">
+
+        <div class="project-box mb-4">
+
+            <input type="text"
+                   class="form-control mb-3 project-name"
+                   placeholder="Project Name">
+
+            <textarea
+                   class="form-control mb-3 project-description"
+                   rows="3"
+                   placeholder="Project Description"></textarea>
+
+            <input type="text"
+                   class="form-control mb-3 project-tech"
+                   placeholder="Technologies Used">
+
+            <input type="text"
+                   class="form-control project-link"
+                   placeholder="Project Link">
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            class="btn-custom mt-3"
+            id="addProjectBtn">
+
+        Add Another Project
+
+    </button>
+
+</div>
+
+        <!-- STEP 5 -->
+
+        <div class="step">
+
+            <h4 class="mb-4">Bio / About</h4>
+
+            <textarea id="about"
+                      rows="8"
+                      class="form-control"
+                      placeholder="Tell us about yourself"></textarea>
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="d-flex justify-content-between mt-5">
+
+            <button type="button"
+                    class="btn-custom"
+                    id="prevBtn">
+                Previous
+            </button>
+
+            <button type="button"
+                    class="btn-custom"
+                    id="nextBtn">
+                Next
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+<script src="js/builder.js"></script>
+
+</body>
+</html>

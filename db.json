@@ -8,7 +8,101 @@
   "selectedSkills": [],
   "portfolios": [],
   "templates": [
-    { "id": 1, "name": "Modern" },
-    { "id": 2, "name": "Minimal" }
-  ]
+
+  {
+    "id": 1,
+    "name": "Modern Blue",
+    "category": "Modern",
+    "file": "modern-blue.html",
+    "image": "images/modern1.jpg"
+  },
+
+  {
+    "id": 2,
+    "name": "Modern Dark",
+    "category": "Modern",
+    "file": "modern-dark.html",
+    "image": "images/modern2.jpg"
+  },
+
+  {
+    "id": 3,
+    "name": "Modern Glass",
+    "category": "Modern",
+    "file": "modern-glass.html",
+    "image": "images/modern3.jpg"
+  },
+
+  {
+    "id": 4,
+    "name": "Modern Gradient",
+    "category": "Modern",
+    "file": "modern-gradient.html",
+    "image": "images/modern4.jpg"
+  },
+
+  {
+    "id": 5,
+    "name": "Minimal White",
+    "category": "Minimal",
+    "file": "minimal-white.html",
+    "image": "images/minimal1.jpg"
+  },
+
+  {
+    "id": 6,
+    "name": "Minimal Elegant",
+    "category": "Minimal",
+    "file": "minimal-elegant.html",
+    "image": "images/minimal2.jpg"
+  },
+
+  {
+    "id": 7,
+    "name": "Minimal Soft",
+    "category": "Minimal",
+    "file": "minimal-soft.html",
+    "image": "images/minimal3.jpg"
+  },
+
+  {
+    "id": 8,
+    "name": "Minimal Clean",
+    "category": "Minimal",
+    "file": "minimal-clean.html",
+    "image": "images/minimal4.jpg"
+  },
+
+  {
+    "id": 9,
+    "name": "Creative Neon",
+    "category": "Creative",
+    "file": "creative-neon.html",
+    "image": "images/creative1.jpg"
+  },
+
+  {
+    "id": 10,
+    "name": "Creative Purple",
+    "category": "Creative",
+    "file": "creative-purple.html",
+    "image": "images/creative2.jpg"
+  },
+
+  {
+    "id": 11,
+    "name": "Creative Colorful",
+    "category": "Creative",
+    "file": "creative-colorful.html",
+    "image": "images/creative3.jpg"
+  },
+
+   {
+    "id": 12,
+    "name": "Creative Animated",
+    "category": "Creative",
+    "file": "creative-animated.html",
+    "image": "images/creative4.jpg"
+  }
+]
 }
